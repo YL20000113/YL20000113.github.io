@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>图片与文字并排</title>
   <style>
   body {
@@ -36,6 +37,45 @@
     line-height: 1.6;
     max-width: 400px;
   }
+    .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* 👈 允许换行（关键） */
+}
+
+/* 图片样式保持原样即可 */
+.container img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  max-width: 100%; /* 👈 限制图片不超过容器宽度 */
+}
+
+/* 响应式文字容器 */
+.container .text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 400px;
+  flex: 1;
+}
+
+/* 👇 响应式调整：在小屏幕下，改为纵向排布 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container .text {
+    max-width: 100%;
+  }
+}
 </style>
 </head>
 <body>
