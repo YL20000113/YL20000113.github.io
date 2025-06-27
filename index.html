@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <title>图片与文字并排</title>
   <style>
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-    }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
 
-    .container img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-    }
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
 
-    .container .text {
-      font-size: 18px;
-      line-height: 1.5;
-      max-width: 400px;
-    }
-  </style>
+  .container img {
+    width: 300px; /* ✅ 图片更大 */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .container .text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 400px;
+  }
+</style>
 </head>
 <body>
   <div class="container">
