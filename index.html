@@ -5,86 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>图片与文字并排</title>
   <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-  }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 40px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  .container img {
-    width: 300px; /* ✅ 图片更大 */
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .container .text {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 400px;
-  }
     .container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-  max-width: 800px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex-wrap: wrap; /* 👈 允许换行（关键） */
-}
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+    }
 
-/* 图片样式保持原样即可 */
-.container img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  max-width: 100%; /* 👈 限制图片不超过容器宽度 */
-}
+    .container img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
 
-/* 响应式文字容器 */
-.container .text {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 400px;
-  flex: 1;
-}
+    .text {
+      max-width: 400px;
+      font-size: 18px;
+      line-height: 1.6;
+      flex: 1;
+    }
 
-/* 👇 响应式调整：在小屏幕下，改为纵向排布 */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
 
-  .container .text {
-    max-width: 100%;
-  }
-}
-</style>
+      .text {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- 可选 logo -->
+  <!-- <img src="your-logo.png" alt="Logo" style="max-width: 200px; margin-bottom: 40px;"> -->
+
   <div class="container">
     <img src="puma.png" alt="示例图片">
     <div class="text">
       <h2>欢迎访问我的网页</h2>
-      <p>PUMA is pleased to announce the innovative NFT collection. PUMA is dedicated to bringing the brand DNA to the digital world and connecting with the community. <br><br>Brand hoodie NFT exclusively from PUMA. The collections on our e.shop are available for all consumers in limited time. </p>
-    </div>
-  </div>
-</body>
-</html>
+      <p>
+        PUMA is pleased to announce the innovative NFT collection. PUMA is dedicated to bringing the brand DNA to the digital world and connecting with the community.
+        <br><br>
+        Brand hoodie NFT exclusively from PUMA. The collection
