@@ -1,74 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUMAStimulus</title>
+  <title>PDF Viewer</title>
   <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 900px;
-      width: 100%;
-    }
-
-    .container img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .text {
-      max-width: 400px;
-      font-size: 18px;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .text {
-        max-width: 100%;
-      }
+    body { margin: 0; padding: 0; }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <!-- 可选 logo -->
-  <!-- <img src="your-logo.png" alt="Logo" style="max-width: 200px; margin-bottom: 40px;"> -->
+  <iframe src="example123.pdf"></iframe>
+</body>
+</html>
 
-  <div class="container">
-    <video autoplay loop muted playsinline style="width: 100%; max-width: 300px; border-radius: 8px;">
-  <source src="sti.mp4" type="video/mp4">
-  您的浏览器不支持 video 标签。
-</video>
-    <div class="text">
-      <h2>PUMA X NFT</h2>
-      <p>
-        PUMA is pleased to announce the innovative NFT collection. PUMA is dedicated to bringing the brand DNA to the digital world and connecting with the community.
-        <br><br>
-        Brand hoodie NFT exclusively from PUMA. The collection on our e.shop is available for all consumers in limited time. Owners of this branded hoodie NFT are eligible to redeem it for corresponding physical editions only for the NFT owners.
-        <br><br>
-        Come and trade, gear up, and explore incredible virtual experiences with PUMA. 
